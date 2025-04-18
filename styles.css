@@ -2,20 +2,26 @@
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(242, 241, 226);
 }
 
 .container {
     margin: 40px 0;
-    
+    display: flex;
+    justify-content: center;
 }
 
 #header_container {
     display: flex;
-    background-color: white;
     justify-content: space-around;
     border-top: 1px solid black;
     margin: 0 6em;
     padding: 20px 0px;
+    width: 100vw;
 }
 
 .links_col {
@@ -57,9 +63,101 @@
 
 /* sections styling */
 
+.page {
+    width: 100%;
+    padding: 0 6em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .section_container {
-    display: none;
-    background-color: greenyellow;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 10px solid black;
+    margin-bottom: 30px;
+}
+
+.big_text h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.resize {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+#text_restaurant {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.text_restaurant1 p {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.text_restaurant2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.text_restaurant2 h2 {
+    font-size: 1.5rem;
+}
+
+.section_container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.resize2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.text_about h1{
+    font-size: 2rem;
+}
+
+.text_space {
+    margin-top: 20px
+}
+
+/* mobile friendly */
+
+@media (max-width: 768px) {
+    #language_col {
+        display: none;
+    }
 }
