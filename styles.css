@@ -10,7 +10,6 @@ body {
 }
 
 .container {
-    margin: 40px 0;
     display: flex;
     justify-content: center;
 }
@@ -19,9 +18,18 @@ body {
     display: flex;
     justify-content: space-around;
     border-top: 1px solid black;
-    margin: 0 6em;
+    margin: 40px 6em;
     padding: 20px 0px;
     width: 100vw;
+}
+
+#logo_col {
+    transform: translate(0, 0); /* Add an initial transform state */
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo_col:hover {
+    transform: translateX(-5px);
 }
 
 .links_col {
@@ -40,6 +48,12 @@ body {
     color: black;
 }
 
+#links_col1 a:hover {
+    background-color: black;
+    color: white;
+    transition: .3s ease;
+}
+
 #language_col {
     padding-right: 20px
 }
@@ -52,6 +66,12 @@ body {
     font-size: 1rem;
 }
 
+#language_col a:hover {
+    background-color: black;
+    color: white;
+    transition: .3s ease;
+}
+
 .addFlexRow {
     display: flex;
 }
@@ -59,6 +79,12 @@ body {
 #menu {
     background: none;
     border: 0;
+    transform: translate(0, 0); /* Add an initial transform state */
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu:hover {
+    transform: translate(5px, 0px);
 }
 
 /* sections styling */
@@ -131,19 +157,16 @@ img {
 
 .section_container2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.resize2 img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+.text_about {
+    display: flex;
+    flex-direction: column;
 }
 
 .text_about h1{
@@ -154,10 +177,56 @@ img {
     margin-top: 20px
 }
 
+.circleAdd {
+    position: relative;
+    margin-top: 20px;
+    margin-left: auto;
+    transition: 0.3s ease;
+    transform: translateX(0px);
+}
+
+.circleAdd:hover {
+    transform: translateX(-5px);
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid black;
+    margin: 40px 6em;
+    padding: 20px 0px;
+}
+
+.map a, .gmail a, .contact a{
+    text-decoration: none;
+    color: black;
+}
+
 /* mobile friendly */
 
-@media (max-width: 768px) {
+@media (max-width: 775px) {
     #language_col {
         display: none;
     }
+
+    .page {
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    .text_about h1{
+        font-size: 1.4rem;
+    }
+
+    .section_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section_container2 {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
