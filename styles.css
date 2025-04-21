@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(242, 241, 226);
+    background-color: #f2f1e2;
 }
 
 .container {
@@ -85,6 +85,58 @@ body {
 
 #menu:hover {
     transform: translate(5px, 0px);
+}
+
+/* General Styles */
+#menu-container {
+    position: relative;
+}
+
+#menu {
+    background: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#nav-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #f2f1e2;
+    border: 1px solid black;
+    border-radius: 0px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+#nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-menu ul li {
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+    transform: translateX(0px);
+}
+
+#nav-menu ul li:hover {
+    transform: translateX(5px);
+    border-left: 2px solid;
+}
+
+#nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+/* Show the menu when active */
+#nav-menu.active {
+    display: block;
 }
 
 /* sections styling */
@@ -189,6 +241,34 @@ img {
     transform: translateX(-5px);
 }
 
+#form_section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#form {
+    position: relative;
+    background: linear-gradient(rgb(226, 225, 211) 30%, rgb(161, 160, 160));
+    border-radius: 20px 20px;
+    width: 70%;
+    box-shadow: 20px 20px 5px rgb(46, 45, 45);
+    margin: 50px 0;
+}
+
+.form_layout {
+    margin: 0 120px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+}
+
+.btn {
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
 .footer_container {
     display: flex;
     justify-content: space-evenly;
@@ -227,6 +307,20 @@ img {
     .section_container2 {
         display: flex;
         flex-direction: column;
+    }
+
+    #nav-menu {
+        width: 100%;
+        top: 40px;
+        right: 0;
+    }
+
+    #nav-menu ul li {
+        text-align: center;
+    }
+
+    .form_layout {
+        margin: 0 10px;
     }
 }
 

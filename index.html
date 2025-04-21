@@ -25,13 +25,20 @@
                 </div>
                 <div class="addFlexRow">
                     <div id="language_col">
-                        <a href="">UZ</a>
-                        <a href="">RU</a>
-                        <a href="">EN</a>
+                        <a href="#" class="lang-option" data-lang="uz">UZ</a>
+                        <a href="#" class="lang-option" data-lang="ru">RU</a>
+                        <a href="#" class="lang-option" data-lang="en">EN</a>
                     </div>
-                    <div><button id="menu">
-                        Menu
-                    </button></div>
+                    <div id="menu-container">
+                        <button id="menu" data-lang="menu">Menu</button>
+                        <nav id="nav-menu" class="hidden">
+                            <ul>
+                                <li><a href="#restaurant_home" data-lang-key="menu_items1">Home</a></li>
+                                <li><a href="#restaurant" data-lang-key="menu_items2">Interior</a></li>
+                                <li><a href="#form_section" data-lang-key="menu_items3">Form</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +73,7 @@
             </div>
             <div id="text_restaurant">
                 <div class="text_restaurant1">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nam nesciunt libero sint, quibusdam asperiores nobis eveniet aliquam voluptatibus nulla, ipsam non magnam quas incidunt repudiandae ad dignissimos. Ea, quo.</p>
+                    <p>Our restaurant, nestled in the city’s heart, exudes timeless elegance with its warm, inviting atmosphere. Vintage chandeliers cast a soft glow over rustic wooden tables, while exposed brick walls and live acoustic music create a cozy yet refined vibe. The charming patio, framed by fairy lights, enhances the intimate dining experience. Our vision is to blend culinary artistry with heartfelt hospitality, and we thank our staff, patrons, and local suppliers for making this dream a reality.</p>
                 </div>
                 <div class="text_restaurant2">
                     <h2>Based in barcelona</h2>
@@ -93,7 +100,7 @@
                     <div class="text_about">
                         <h1>The Restaurant</h1>
                             <div class="text_space">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est fugiat consequatur saepe at distinctio nesciunt ut quisquam rerum temporibus? Voluptates quibusdam ea sunt nihil vitae cumque numquam doloribus at!</p>
+                                <p>The menu celebrates Mediterranean traditions, featuring seasonal ingredients in dishes like handmade pastas and seared seafood. Our chefs source fresh produce from local farms, crafting bold yet refined flavors, such as our signature truffle risotto. An extensive wine list complements every meal, offering a sensory journey with each course.</p>
                             </div>
                             <div class="circleAdd">
                                 <img src="./images/add_circle_icon.png" alt="circle add button">
@@ -102,7 +109,7 @@
                     <div class="text_about">
                         <h1>Proposal</h1>
                             <div class="text_space">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est fugiat consequatur saepe at distinctio nesciunt ut quisquam rerum temporibus? Voluptates quibusdam ea sunt nihil vitae cumque numquam doloribus at!</p>
+                                <p>This restaurant is a place for connection, with an open kitchen showcasing culinary passion. Our attentive staff ensures a seamless experience, and the private dining room, adorned with hand-painted murals, is perfect for special occasions like proposals or anniversaries. Every detail is crafted to make each visit memorable.</p>
                             </div>
                             <div class="circleAdd">
                                 <img src="./images/add_circle_icon.png" alt="circle add button">
@@ -111,7 +118,7 @@
                     <div class="text_about">
                         <h1>Acknowledgwments</h1>
                             <div class="text_space">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est fugiat consequatur saepe at distinctio nesciunt ut quisquam rerum temporibus? Voluptates quibusdam ea sunt nihil vitae cumque numquam doloribus at!</p>
+                                <p>As a community hub, we host wine tastings and cooking classes, partnering with local artisans for our bread and cheeses. La Bella Vita is more than a restaurant—it’s where tradition, innovation, and community converge to create lasting memories.</p>
                             </div>
                             <div class="circleAdd">
                                 <img src="./images/add_circle_icon.png" alt="circle add button">
@@ -119,6 +126,31 @@
                     </div>
                 </div>
         </section>
+        <section id="form_section">
+            <form action="/submit" method="POST" id="form">
+                <div class="form_layout">
+                <!-- Text Input -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                    <!-- Email Input -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                    <!-- Dropdown -->
+                    <label for="options">Choose an option:</label>
+                    <select id="options" name="options">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </section>
+        </form>
         <footer>
             <div class="footer_container">
                     <div class="contact">
@@ -133,5 +165,6 @@
             </div>
         </footer>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
